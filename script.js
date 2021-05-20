@@ -15,13 +15,13 @@ var putIn = [];
 
 function generatePassword(){
 
- var addLowercase = ("Do you want lowercase letters?");
+ var addLowercase = confirm("Do you want lowercase letters?");
  console.log(addLowercase);
-var addUppercase = ("do you want uppercase letters?");
+var addUppercase = confirm("do you want uppercase letters?");
 console.log(addUppercase);
-var addSpecial = ("Do you want special characters and/or numbers because I was too lazy to put numbers in their own category?");
+var addSpecial = confirm("Do you want special characters and/or numbers because I was too lazy to put numbers in their own category?");
 console.log(addSpecial);
-var passwordLength = "The password's gotta be inbetween 8 and 128 characters. Why someone would create a 128 character password is beyond me."
+var passwordLength = confirm("The password's gotta be inbetween 8 and 128 characters. Why someone would create a 128 character password is beyond me.")
 while(passwordLength < 8 || passwordLength > 128){
 alert ("gotta read homeboi,");
 passwordLength = prompt("The password's gotta be inbetween 8 and 128 characters. Why someone would create a 128 character password is beyond me.")
@@ -41,6 +41,9 @@ if (addSpecial){
 }
 console.log(putIn);
 
+
+
+
 }
 
 // Write password to the #password input
@@ -56,7 +59,4 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-// create a function that on click will prompt the character length for the password (must be between 8-128 characters) 
-
-// after prompt function add confirm function for adding capital, undercase and special characters
 
