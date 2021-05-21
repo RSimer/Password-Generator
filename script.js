@@ -48,7 +48,7 @@ console.log(putIn);
 
 var passwordCriteria = {
   length: length,
-  addLowerCase: addlowerCase,
+  addLowerCase: addLowerCase,
   addUpperCase: addUpperCase,
   addSpecial: addSpecial
 };
