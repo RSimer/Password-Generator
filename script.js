@@ -10,18 +10,27 @@ var special = ["!","@","#","$","%","^","&","*","(",")","-","_","=","+","{","}","
 var putIn = [];
 
 
+// end of Assignment code
+
+// ---------------------------------------------------------------------------------------------
+
+// password questions
 
 function PassQuestions(){
 
+// asking for lowercase letters
  var addLowercase = confirm("Do you want lowercase letters?");
  console.log(addLowercase);
 
+//  asking for uppercase characters
 var addUppercase = confirm("do you want uppercase letters?");
 console.log(addUppercase);
 
+//  asking for special characters (and numbers dont sue me)
 var addSpecial = confirm("Do you want special characters and/or numbers because I was too lazy to put numbers in their own category?");
 console.log(addSpecial);
 
+// prompting the lenght of the password which my peers helped me immensly on
 var passwordLength = prompt("The password's gotta be inbetween 8 and 128 characters. Why someone would create a 128 character password is beyond me.")
 while(passwordLength < 8 || passwordLength > 128){
 alert ("gotta read homeboi,");
@@ -29,23 +38,31 @@ passwordLength = prompt("The password's gotta be inbetween 8 and 128 characters.
 }
 console.log(passwordLength);
 
+// end of question section
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // if statements
 
+// if add lowercase
 if (addLowercase){
   putIn.push(lowercase);
 }
-
+// if add uppercase
 if (addUppercase){
   putIn.push(uppercase);
 }
-
+// if add special
 if (addSpecial){
   putIn.push(special);
 }
 console.log(putIn); 
 
+// end of if statements
 
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// this takes the if statements and should put them in the password generator
 var passwordCriteria = {
   length: length,
   addLowercase: addLowercase,
@@ -54,6 +71,8 @@ var passwordCriteria = {
 };
 return passwordCriteria;
 
+
+// creating the random password with events that are still confusing to me
 }
 function randomSelector(arr){
 var type = Math.floor(Math.random * arr.length);
