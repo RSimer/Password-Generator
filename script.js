@@ -117,6 +117,7 @@ for (i=0; i<certainCharacters.length; i++){
 return passResult.join("");
 
 }
+// ----------------------------------------------------------------------------------------------------------------
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
