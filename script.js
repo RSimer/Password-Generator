@@ -64,7 +64,7 @@ console.log(putIn);
 
 // this takes the if statements and should put them in the password generator
 var passwordCriteria = {
-  length: length,
+  length: passwordLength,
   addLowercase: addLowercase,
   addUppercase: addUppercase,
   addSpecial: addSpecial
@@ -75,46 +75,46 @@ return passwordCriteria;
 // creating the random password with events that are still confusing to me
 }
 function randomSelector(arr){
-var type = Math.floor(Math.random * arr.length);
+var type = Math.floor(Math.random() * arr.length);
 var element = arr[type];
 return element;
-console.log (type);
 }
 
 // randomizer if statements need to be put in
 
 function generatePassword(){
-var options = PassQuestions();
-var passResult = [];
-var potentialCharacters = [];
-var certainCharacters = [];
+  var options = PassQuestions();
+  console.log(options);
+  var passResult = [];
+  var potentialCharacters = [];
+    var certainCharacters = [];
 
-if (options.addLowercase){
-  potentialCharacters = potentialCharacters.concat(lowercase);
-  certainCharacters.push(randomSelector(lowercase))
-}
-if (options.addUppercase){
-  potentialCharacters = potentialCharacters.concat(uppercase);
-  certainCharacters.push(randomSelector(uppercase))
-}
-if (options.addSpecial){
-  potentialCharacters = potentialCharacters.concat(special);
-  certainCharacters.push(randomSelector(special))
-}
+  if (options.addLowercase){
+      potentialCharacters = potentialCharacters.concat(lowercase);
+      certainCharacters.push(randomSelector(lowercase))
+  }
+  if (options.addUppercase){
+    potentialCharacters = potentialCharacters.concat(uppercase);
+      certainCharacters.push(randomSelector(uppercase))
+  }
+  if (options.addSpecial){
+    potentialCharacters = potentialCharacters.concat(special);
+      certainCharacters.push(randomSelector(special))
+  }
+  console.log(potentialCharacters);
+  for (i=0; i<options.length; i++){
 
-for (i=0; i<options.length; i++){
+    var characters = randomSelector(potentialCharacters);
+    passResult.push(characters)
+      
+  }
+  for (i=0; i<certainCharacters.length; i++){
 
-  var characters = randomSelector(potentialCharacters);
-  passResult.push(characters)
+    passResult[i] = certainCharacters[i];
 
-}
-for (i=0; i<certainCharacters.length; i++){
-
- passResult[i] = certainCharacters[i];
-
-}
-
-return passResult.join("");
+  }
+ console.log (passResult);
+  return passResult.join("");
 
 }
 // ----------------------------------------------------------------------------------------------------------------
