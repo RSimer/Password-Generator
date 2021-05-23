@@ -18,7 +18,7 @@ This was a really fun project for a couple of reasons. First, javascript is real
 
 # Proofs in the pudding
 
-![Screenshot](screenshot-generator.png);
+![Screenshot](assets/images/screenshot-generator.png);
 
 https://rsimer.github.io/Password-Generator/
 
